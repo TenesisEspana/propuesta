@@ -17,7 +17,7 @@
                             templateShareable: true }">
 
                         <layoutData>
-                            <FlexItemData id="_IDGenFlexItemData1" maxWidth="50%" alignSelf="Auto" />
+                            <FlexItemData id="_IDGenFlexItemData1" maxWidth="50%" alignSelf="Center" />
                         </layoutData>
 
                         
