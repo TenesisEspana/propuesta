@@ -10,10 +10,7 @@ Link : https://sapui5.hana.ondemand.com/sdk/#/entity/sap.m.NotificationListItem/
 
  
 
-
-
-
-
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/785c0049-5a1f-4d27-8328-a03d22eea7bf)
 
 
 
@@ -24,7 +21,8 @@ Ya creado el proyecto fiori, dentro de la carpeta de webapp se encuentra las sub
 
 Main.view.xml
 
-<mvc:View 
+    <mvc:View 
+
     xmlns:imageeditor="sap.suite.ui.commons.imageeditor" 
     controllerName="techcool.notifiacationm.controller.main"
     xmlns:mvc="sap.ui.core.mvc" 
@@ -34,8 +32,8 @@ Main.view.xml
     <Shell id="_IDGenShell1">
         <App id="_IDGenApp1" busy="{appView>/busy}" class="sapUiSizeCompact">
             <Page id="page" title="{i18n>title}">
-                
-                <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+              
+               <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
                     <NotificationList 
                         id="NotificationList" 
                         items="{ 
@@ -65,73 +63,72 @@ Main.view.xml
             </Page>
         </App>
     </Shell>
-</mvc:View>
+    </mvc:View>
+    
 En el siguiente código se mostrar el controlador de la vista 
 main.controller.js
-sap.ui.define([
-        "sap/ui/core/mvc/Controller",
-        "sap/ui/model/json/JSONModel",
-        "sap/ui/model/Sorter",
-        "sap/ui/model/Filter",
-        "sap/ui/model/FilterOperator",
-        "sap/ui/model/FilterType",
-        "sap/m/MessageToast",
-        "sap/m/MessageBox",
-    ], function(Controller, JSONModel, Sorter, Filter, FilterOperator, FilterType, MessageToast, MessageBox){
-        "use strict";
 
-        var ListController =  Controller.extend("techcool.notifiacationm.controller.main", {
-            
-            onInit : function (evt){
-                /*var oJSONData = {
-                    busy : false,
-                    order : 0
+    sap.ui.define([
+            "sap/ui/core/mvc/Controller",
+            "sap/ui/model/json/JSONModel",
+            "sap/ui/model/Sorter",
+            "sap/ui/model/Filter",
+            "sap/ui/model/FilterOperator",
+            "sap/ui/model/FilterType",
+            "sap/m/MessageToast",
+            "sap/m/MessageBox",
+        ], function(Controller, JSONModel, Sorter, Filter, FilterOperator, FilterType, MessageToast, MessageBox){
+            "use strict";
+    
+            var ListController =  Controller.extend("techcool.notifiacationm.controller.main", {
+                
+                onInit : function (evt){
+                    /*var oJSONData = {
+                        busy : false,
+                        order : 0
+                    },
+                    oModel = new JSONModel(oJSONData);
+                    this.getView().setModel(oModel, "appView");*/
+                    var oModel = this.getView().getModel("employees");
+                    this.getView().setModel(oModel, "appView");
                 },
-                oModel = new JSONModel(oJSONData);
-                this.getView().setModel(oModel, "appView");*/
-                var oModel = this.getView().getModel("employees");
-                this.getView().setModel(oModel, "appView");
-            },
-
-            onSearch : function () {
-                const oModel = [
-                    'ID',
-                    'FirstName',
-                    'LastName',
-                    'Address',
-                    'HomePhone'
-                ];
-                var oView = this.getView(),
-                    sValue = oView.byId("searchField").getValue(),
-                    oFilter = new Filter("Title", FilterOperator.Contains, sValue);
     
-                oView.byId("notificationList").getBinding("items").filter(oFilter, FilterType.Application);
-            },
-
-            onItemClose: function (oEvent) {
-                var oItem = oEvent.getSource(),
-                    oList = oItem.getParent();
+                onSearch : function () {
+                    const oModel = [
+                        'ID',
+                        'FirstName',
+                        'LastName',
+                        'Address',
+                        'HomePhone'
+                    ];
+                    var oView = this.getView(),
+                        sValue = oView.byId("searchField").getValue(),
+                        oFilter = new Filter("Title", FilterOperator.Contains, sValue);
+        
+                    oView.byId("notificationList").getBinding("items").filter(oFilter, FilterType.Application);
+                },
     
-                oList.removeItem(oItem);
-                MessageToast.show("Item Closed: " + this._getText("deletionSuccessMessage", Title));
-            },
-
-            _getText : function (sTextId, aArgs) {
-                return this.getOwnerComponent().getModel("i18n").getResourceBundle().getText(sTextId, aArgs);
+                onItemClose: function (oEvent) {
+                    var oItem = oEvent.getSource(),
+                        oList = oItem.getParent();
+        
+                    oList.removeItem(oItem);
+                    MessageToast.show("Item Closed: " + this._getText("deletionSuccessMessage", Title));
+                },
     
-            }
-
+                _getText : function (sTextId, aArgs) {
+                    return this.getOwnerComponent().getModel("i18n").getResourceBundle().getText(sTextId, aArgs);
+        
+                }
+    
+            });
         });
-    });
     
 
 
 En el manifest.json se hace el llamado mock servers, odata o a la API
 
- 
-
-
-
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/ea669445-203e-43f2-a09a-fa3aa3babc32)
 
 
 Links adicional
