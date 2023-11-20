@@ -5,6 +5,28 @@ Ejercicio práctico: Listado de notificaciones. A continuación, se mostrarán l
 ![image](https://github.com/TenesisEspana/propuesta/assets/37408577/411e14a2-22ac-4cc9-a5a4-7608183727fb)
 
 
+Creacion del proyecto
+
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/30c0b31e-7488-459d-b756-dd173e47b641)
+
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/fd7f48d3-3785-412e-af5a-4283086a2cdd)
+
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/9923cc78-05e3-4b0f-957b-42c76f3be56f)
+
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/29a168b9-f52f-4cbb-b9be-13e783158666)
+
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/74164e46-b24d-4abf-a075-aa2fc52c4b06)
+
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/c47252b2-5286-4eff-a932-b298d5ee1c5f)
+
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/f279b608-500a-46f0-9683-d443f4dcea1e)
+
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/459facf6-62d8-4d96-88ab-3cae4fcee50e)
+
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/930a6965-e82e-4545-b612-763e0655c36b)
+
+
+
 En el siguiente link se obtuvo la vista el cual se modificó a conveniencia del ejercicio, donde se adapta a los datos que se van a mostrar.
 Link : https://sapui5.hana.ondemand.com/sdk/#/entity/sap.m.NotificationListItem/sample/sap.m.sample.NotificationListItem
 
