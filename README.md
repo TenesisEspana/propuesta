@@ -39,8 +39,9 @@ Link : https://sapui5.hana.ondemand.com/sdk/#/entity/sap.m.NotificationListItem/
 
 Ya creado el proyecto fiori, dentro de la carpeta de webapp se encuentra las subcarpetas View donde está la vista main.view.xml, controller donde está el archivo main.controller.js y en la raíz del proyecto el manifest.json en estos 3 es donde se van hacer las modificaciones  
 
- 
+![image](https://github.com/TenesisEspana/propuesta/assets/37408577/cb4fcc32-4d16-43a2-9cf7-614cd21c77e5)
 
+ 
 Main.view.xml
 
     <mvc:View 
